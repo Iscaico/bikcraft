@@ -1,0 +1,20 @@
+.titleGlobal{
+   background-color: var(--cor11);
+}
+
+.titleGlobalContainer{
+   padding-top: 60px;
+   padding-bottom: 60px;
+}
+
+@media (width <= 800px){
+   .titleGlobalContainer{
+      padding-top: 40px;
+      padding-bottom: 40px;
+   }
+   .titleGlobalContainer p{
+      text-transform: lowercase;
+      font-size: 1rem;
+      font-weight: 400;
+   }
+}

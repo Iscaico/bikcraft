@@ -1,0 +1,82 @@
+.seguros{
+   background-color: var(--cor11);
+}
+
+.segurosContainer{
+   padding-top: 60px;
+   padding-bottom: 60px;
+}
+
+.segurosContainer > h2{
+   margin-bottom: 40px;
+}
+
+.segurosOptions{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 40px;
+   align-items: center;
+}
+
+.segurosOptionsItem{
+   background-color: var(--cor12);
+   padding: 32px 32px 32px 60px;
+   border-radius: 4px;
+
+   display: grid;
+   grid-template-columns: 1fr auto;
+}
+
+.segurosOptionsItem h3{
+   text-transform: uppercase;
+   margin-bottom: 40px;
+}
+
+.segurosOptionsItem ul{
+   grid-column: 1/-1;
+   margin-bottom: 32px;
+}
+
+.segurosOptionsItem ul li{
+   display: flex;
+   align-items: center;
+   position: relative;
+}
+
+.segurosOptionsItem ul li::before{
+   content: '';
+   height: 9px;
+   width: 13px;
+   background: url("../../img/icones/lista.svg");
+   display: block;
+   position: absolute;
+   left: -21px;
+}
+
+.segurosOptionsItem ul li + li{
+   margin-top: 20px;
+}
+
+.segurosOptionsItem a{
+   grid-column: 1/-1;
+   justify-self: start;
+}
+
+.segurosOptionsItemPrice{
+   display: flex;
+   flex-direction: column;
+}
+
+.segurosOptionsItemPrice{
+   text-align: end;
+}
+
+@media (width <= 800px){
+   .segurosOptions{
+      grid-template-columns: 1fr;
+   }
+
+   .segurosOptionsItem{
+      padding: 32px 32px 32px 48px;
+   }
+}

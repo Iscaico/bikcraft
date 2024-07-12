@@ -1,0 +1,28 @@
+.segurosOptionsSeguroPag{
+   padding-bottom: 60px;
+}
+
+.segurosVantagens{
+   background-color: var(--cor12);
+}
+
+.segurosVantagensContainer{
+   padding-top: 120px;
+   padding-bottom: 120px;
+}
+
+.segurosVantagensContainer h2{
+   margin-bottom: 60px;
+}
+
+.segurosVantagensItems{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(240px, max-content));
+   gap: 40px 80px;
+}
+
+.segurosVantagensItems h3,
+.segurosVantagensItems img{
+   margin-bottom: 8px;
+}
+

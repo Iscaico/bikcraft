@@ -1,0 +1,219 @@
+#contatoBody{
+   background-color: var(--cor1);
+}
+
+.contatoContent{
+   background: linear-gradient(var(--cor11) 50%, var(--cor1) 0%);
+}
+
+.contatoContentContainer{
+   display: grid;
+   grid-template-columns: 5fr 7fr;
+}
+
+
+/* Informações de contato */
+
+.contatoInfo{
+   background-color: var(--cor12);
+   padding: 60px;
+   border-radius: 4px 0px 0px 4px;
+}
+
+.contatoInfo h2{
+   margin-bottom: 60px;
+}
+
+.contatoInfo ul{
+   margin-bottom: 32px;
+}
+
+.contatoInfo ul li{
+   margin-bottom: 8px;
+}
+
+.contatoInfo ul, 
+.contatoInfo address,  
+.contatoIntRedes{
+   padding-left: 28px;
+}
+
+.contatoInfo ul li, 
+.contatoInfo address a:first-child, 
+.contatoInfo address a:last-child{
+   position: relative;
+}
+
+.contatoInfo ul li:first-child:before,
+.contatoInfo address a:first-child::before,
+.contatoInfo address a:last-child::before{
+   content: '';
+   height: 20px;
+   width: 20px;
+   display: block;
+   position: absolute;
+   top: 2px;
+   left: -28px;
+}
+
+.contatoInfo ul li:first-child:before{
+   background: url('../../img/icones/local.svg');
+}
+
+.contatoInfo address a:first-child::before{
+   background: url('../../img/icones/email.svg');
+}
+
+.contatoInfo address a:last-child::before{
+   background: url('../../img/icones/telefone.svg');
+}
+
+.contatoInfo address a{
+   display: block;
+}
+
+.contatoInfo address a:first-child{
+   margin-bottom: 8px;
+}
+
+.contatoInfo address a:nth-child(2){
+   margin-bottom: 32px;
+}
+
+.contatoInfo address a:last-child{
+   margin-bottom: 60px;
+}
+
+.contatoIntRedes{
+   display: flex;
+   align-items: center;
+   gap: 32px;
+}
+
+/* formulario */
+
+.contatoForm{
+   padding: 60px;
+   background-color: var(--cor0);
+   border-radius: 0px 4px 4px 0px;
+   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.contatoForm form{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 20px;
+}
+
+.contatoForm form input,
+.contatoForm form textarea{
+   width: 100%;
+}
+
+.contatoForm form input[type="text"], 
+.contatoForm form input[type="email"], 
+.contatoForm form textarea {
+   font: 400 1rem / 1.5 "Roboto", sans-serif;
+   background: var(--cor1);
+   border: 1px solid var(--cor2);
+   border-radius: 4px;
+   padding: 12px;
+   width: 100%;
+   box-sizing: border-box;
+}
+
+.contatoForm form input[type="text"]:focus, 
+.contatoForm form input[type="email"]:focus, 
+.contatoForm form textarea:focus{
+   outline: none;
+   border-color: var(--corA1);
+   box-shadow: 0px 0px 2px 0px var(--corA1);
+}
+
+.contatoForm form div:nth-child(n + 3), .contatoForm button[type='submit']{
+   grid-column: 1/-1;
+}
+
+.contatoForm form label{
+   cursor: pointer;
+}
+
+.contatoForm button[type='submit']{
+   justify-self: start;
+}
+
+.contatoForm label{
+   display: block;
+   font: 400 1rem / 1.5 "Poppins", sans-serif;
+   margin-bottom: 4px;
+}
+
+@media (width <= 800px){
+   .contatoContent{
+      background: var(--cor11);
+      padding-bottom: 120px;
+   }
+
+   .contatoContentContainer{
+      grid-template-columns: 1fr;
+   }
+
+   .contatoInfo{
+      border-radius: 4px 4px 0px 0px;
+   }
+
+   .contatoForm{
+      border-radius: 0px 0px 4px 4px;
+   }
+
+   /* informaçoes */
+   .contatoInfo, .contatoForm{
+      padding: 40px;
+   }
+
+   .contatoInfo h2{
+      margin-bottom: 32px;
+      font-size: 1rem;
+   }
+
+   .contatoInfo ul{
+      margin-bottom: 28px;
+   }
+
+   .contatoInfo address a:last-child{
+      margin-bottom: 32px;
+   }
+}
+
+@media (width <= 600px){
+   .contatoContent{
+      padding-bottom: 80px;
+   }
+   
+   .contatoForm form div{
+      grid-column: 1/-1;
+   }
+
+   .contatoInfo, .contatoForm{
+      padding: 20px;
+   }
+
+   .contatoInfo ul, 
+   .contatoInfo address,  
+   .contatoIntRedes{
+      padding: 0px;
+   }
+
+   .contatoInfo ul li, 
+   .contatoInfo address a:first-child, 
+   .contatoInfo address a:last-child{
+      position: initial;
+   }
+
+   .contatoInfo ul li:first-child:before,
+   .contatoInfo address a:first-child::before,
+   .contatoInfo address a:last-child::before{
+      position: initial;
+      margin-bottom: 8px;
+   }
+}

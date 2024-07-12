@@ -1,0 +1,130 @@
+.bicicletasIntContainer{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 40px;
+   padding-bottom: 120px;
+}
+
+.bicicletasIntImgs{
+   display: flex;
+   flex-wrap: wrap;
+   place-content: start;
+   gap: 20px;
+}
+
+.bicicletasIntImgs img{
+   flex: 1;
+   min-width: 200px;
+}
+
+.bicicletasIntImgs img:first-child{
+   min-width: 100%
+}
+
+.bicicletasIntContent > p{
+   margin-bottom: 32px;
+}
+
+.bicicletasIntContent h2{
+   text-transform: uppercase;
+   margin-bottom: 12px;
+}
+
+.bicicletasIntContentBuy{
+   display: grid;
+   grid-template-columns: max-content auto;
+   gap: 8px 12px;
+   justify-items: start;
+   align-items: center;
+   margin-bottom: 40px;
+}
+
+.bicicletasIntContentBuy a{
+   grid-row: span 2;
+}
+
+.bicicletasIntContentBuy span{
+   display: flex;
+   align-items: center;
+   gap: 8px;
+   padding: 4px 8px;
+   border-radius: 4px;
+   background-color: var(--cor12);
+}
+
+.bicicletasIntContentBuy span img{
+   height: 16px;
+   width: 16px;
+}
+
+.bicicletasIntContentInfo,
+.bicicletasIntContentFicha{
+   background-color: var(--cor12);
+   border-radius: 4px;
+   padding: 32px;
+}
+
+.bicicletasIntContentInfo img,
+.bicicletasIntContentFicha img{
+   height: 24px;
+   width: 24px;
+   margin-bottom: 8px;
+}
+
+.bicicletasIntContentInfo h3,
+.bicicletasIntContentFicha h3{
+   margin-bottom: 8px;
+}
+
+.bicicletasIntContentInfo{
+   margin-bottom: 40px;
+}
+
+.bicicletasIntContentInfo{
+   display: grid;
+   gap: 32px;
+   grid-template-columns: 1fr 1fr;
+}
+
+.bicicletasIntContentFicha li{
+   display: flex;
+   justify-content: space-between;
+   padding: 4px 0px;
+}
+
+.bicicletasIntContentFicha li + li{
+   
+   border-top: 1px solid var(--cor11);
+}
+
+@media (width <= 800px){
+   .bicicletasIntContainer{
+      padding-bottom: 80px;
+   }
+
+   .mainBicicletaInt .titleGlobalContainer > p{
+      text-transform: uppercase;
+   }
+
+   .bicicletasIntContainer{
+      grid-template-columns: 1fr;
+   }
+
+   .bicicletasIntImgs{
+      order: 1;
+   }
+}
+
+@media (width <= 400px){
+   .bicicletasIntContentBuy{
+      grid-template-columns: 1fr;
+   }
+
+   .bicicletasIntContentBuy a{
+      margin-bottom: 8px;
+   }
+
+   .bicicletasIntContentInfo{
+      grid-template-columns: 1fr;
+   }
+}

@@ -1,0 +1,90 @@
+.depoimento{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   background-color: var(--corA1);
+}
+
+.depoimentoImg img{
+   height: 100%;
+   width: 100%;
+   border-radius: 0px;
+   object-fit: cover;
+}
+
+.depoimentoConteudo{
+   padding: 40px 40px 80px 80px;
+   align-self: end;
+}
+
+.depoimentoConteudo blockquote{
+   max-width: 32ch;
+}
+
+.depoimentoConteudo blockquote p {
+   margin-bottom: 32px;
+   font-family: 'Merriweather', serif;
+   font-weight: 900;
+   font-style: italic;
+   position: relative;
+}
+
+.depoimentoConteudo blockquote p::before{
+   content: '“';
+   top: -16px;
+   left: -46px;
+}
+
+.depoimentoConteudo blockquote p::after{
+   content: '”';
+   bottom: -50px;
+}
+
+.depoimentoConteudo blockquote p::before,
+.depoimentoConteudo blockquote p::after{ 
+   position: absolute;
+   color: var(--corA2);
+   font-size: 4rem;
+}
+   
+@media (width >= 1200px){
+   .depoimentoImg img {
+      max-height: 520px;
+   }
+}
+
+@media (width <= 800px){
+   .depoimento{
+      grid-template-columns: 1fr;
+   }
+   
+   .depoimentoImg img {
+      max-height: 200px;
+   }
+
+   .depoimentoConteudo{
+      padding: 40px 20px;
+      align-self: center;
+      text-align: center;
+   }
+   
+   .depoimentoConteudo blockquote{
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+   }
+
+   .depoimentoConteudo blockquote p{
+      max-width: 32ch;
+   }
+
+   .depoimentoConteudo blockquote p::before{ 
+      position: initial;
+      font-size: 2rem;
+      margin-right: 2px;
+   }
+
+   .depoimentoConteudo blockquote p::after{
+      bottom: -10px;
+      font-size: 2rem;
+   }
+}

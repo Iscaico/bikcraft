@@ -1,0 +1,21 @@
+.conteudoTermos{
+   padding-top: 80px;
+   padding-bottom: 80px;
+}
+
+.conteudoTermos h2{
+   margin-bottom: 20px;
+}
+
+.conteudoTermos div:nth-child(n + 2) h2{
+   margin-top: 40px;
+}
+
+.conteudoTermos p{
+   margin-bottom: 24px;
+   max-width: 75ch;
+}
+
+.conteudoTermos div:last-child p{
+   margin: 0px;
+}
